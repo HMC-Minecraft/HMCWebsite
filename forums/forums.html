@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HMC Forums</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the HMC Forum</h1>
+        <!-- Add a sign-in/sign-out button or link here -->
+        <button onclick="signIn()">Sign In</button>
+    </header>
+    <main>
+        <!-- Forum posts go here -->
+        <div class="post">
+            <h2>Post Title 1</h2>
+            <p>Posted by: User1</p>
+            <p>Content of the forum post goes here.</p>
+        </div>
+        <div class="post">
+            <h2>Post Title 2</h2>
+            <p>Posted by: User2</p>
+            <p>Content of another forum post.</p>
+        </div>
+        <!-- Add a form to create new posts (only visible if the user is signed in) -->
+        <form id="postForm" style="display: none;">
+            <h2>Create a New Post</h2>
+            <label for="postTitle">Title:</label>
+            <input type="text" id="postTitle" name="postTitle">
+            <label for="postContent">Content:</label>
+            <textarea id="postContent" name="postContent"></textarea>
+            <button onclick="submitPost()">Submit</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2023 Forum Website
+    </footer>
+
+    <script>
+        function signIn() {
+            // Implement user sign-in logic here.
+            // Show the post form if the user is signed in.
+            document.getElementById("postForm").style.display = "block";
+        }
+
+        function submitPost() {
+            // Implement post submission logic here.
+            // This function should send the new post data to the server.
+            // After successful submission, add the new post to the page.
+        }
+    </script>
+</body>
+
+</html>
