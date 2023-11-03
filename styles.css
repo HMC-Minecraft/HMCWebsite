@@ -75,6 +75,7 @@ red, blue, green {
     margin-right: -6px; /* Adjust the value to control letter spacing */
 }
 .image-width {
+    height: auto;
     width: 100%;
 }
 h1 {
