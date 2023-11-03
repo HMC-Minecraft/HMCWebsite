@@ -1,9 +1,4 @@
 const Discord = require('discord.js');
-const fs = require('fs');
-
-// Load the configuration file
-const config = JSON.parse(fs.readFileSync('config.json'));
-
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -11,8 +6,9 @@ client.on('ready', () => {
     updatePresence();
 });
 
-const token = config.token;
-const serverId = config.serverId;
+const token = 'MTE2ODQ0OTYxOTUwMDQ4NjY5Ng.GRBE_w.GyW0mQHBRe6dPuLdDvKuuCpiKLz9ehQwD668Zk';
+const serverId = '1103735747770601654'; // Your Discord server ID
+setInterval(updatePresence, 5000);
 
 function updatePresence() {
     const presence = document.getElementById('presence');
@@ -26,12 +22,6 @@ function updatePresence() {
         document.getElementById('serverName').textContent = serverName;
         document.getElementById('totalMembers').textContent = totalMembers;
         document.getElementById('onlineMembers').textContent = onlineMembers;
-
-
-
-        const serverIcon = document.getElementById('serverIcon');
-        serverIcon.src = serverIconURL;
-        serverIcon.alt = serverName;
     }
 }
 
