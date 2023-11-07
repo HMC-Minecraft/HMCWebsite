@@ -56,31 +56,42 @@ body {
     height: auto;
     /* Maintain aspect ratio */
 }
+
 .red {
     color: red;
     letter-spacing: 0;
 }
+
 .blue {
     color: blue;
     letter-spacing: 0;
 }
+
 .green {
-    color:green;
+    color: green;
     letter-spacing: 0;
 }
-red, blue, green {
+
+red,
+blue,
+green {
     letter-spacing: 0;
 }
+
 .colored-text span {
-    margin-right: -6px; /* Adjust the value to control letter spacing */
+    margin-right: -6px;
+    /* Adjust the value to control letter spacing */
 }
+
 .image-width {
     height: auto;
     width: 100%;
 }
+
 h1 {
     text-align: center;
 }
+
 #presence {
     background-color: #2f3136;
     border: 1px solid #2f3136;
