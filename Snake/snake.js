@@ -14,6 +14,7 @@ var snakeBody = [];
 
 var foodX;
 var foodY;
+var score = 0;
 
 var gameOver = false;
 
@@ -22,12 +23,16 @@ window.onload = function () {
   board.height = total_row * blockSize;
   board.width = total_col * blockSize;
   context = board.getContext("2d");
+  highestScore = localStorage.getItem("highestScore") || 0;
+  updateScore();
 
   placeFood();
   document.addEventListener("keyup", changeDirection);
   setInterval(update, 1000 / 10);
+  
 }
 function restartGame() {
+  score = 0;
   snakeX = blockSize * 5;
   snakeY = blockSize * 5;
   speedX = 0;
@@ -35,11 +40,12 @@ function restartGame() {
   snakeBody = [];
   gameOver = false;
   placeFood();
+  updateScore();
 }
 
 function update() {
   if (gameOver) {
-    const playAgain = confirm("Game Over! Play again?");
+    const playAgain = confirm("Game Over! Your score is " + score + ". Play again?");
     if (playAgain) {
       restartGame();
     }
@@ -57,8 +63,15 @@ function update() {
   if (snakeX == foodX && snakeY == foodY) {
     snakeBody.push([foodX, foodY]);
     placeFood();
+    score++;
+    updateScore();
   }
 
+  if (score > highestScore) {
+    highestScore = score;
+    localStorage.setItem("highestScore", highestScore);
+    updateScore();
+}
 
   for (let i = snakeBody.length - 1; i > 0; i--) {
 
@@ -120,4 +133,8 @@ function changeDirection(e) {
 function placeFood() {
   foodX = Math.floor(Math.random() * total_col) * blockSize;
   foodY = Math.floor(Math.random() * total_row) * blockSize;
+}
+
+function updateScore() {
+  document.getElementById("score-container").textContent = "Score: " + score;
 }

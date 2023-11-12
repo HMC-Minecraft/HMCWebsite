@@ -54,3 +54,8 @@ body {
   height: auto;
   /* Maintain aspect ratio */
 }
+#score-container {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+}

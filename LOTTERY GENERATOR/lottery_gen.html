@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMC LOTTERY</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('');
+            background-size: cover; /* Use cover to fit the entire background without cropping */
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: rgb(177, 121, 53);
+            width: 3111px;
+            height: 1698px;
+            overflow: hidden;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .logo-container {
+            margin: 1px auto;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .large-image {
+            width: 100%;
+            height: auto;
+            margin-top: 1px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .number-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .number {
+            font-size: 24px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 50px;
+            text-align: center;
+            background: rgba(124, 109, 181, 0.7);
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="" alt="HMC Logo">
+    </div>
+    <h1>HMC LOTTERY</h1>
+    <div class="number-container" id="numbers"></div>
+</div>
+
+<!-- New image div below the main container -->
+<div class="large-image">
+    <img src="post_nudes" alt="Large Image">
+</div>
+
+<script>
+    function generateRandomNumber() {
+        return Math.floor(Math.random() * 10);
+    }
+
+    function generateNumbers() {
+        let numbersContainer = document.getElementById("numbers");
+        numbersContainer.innerHTML = "";
+
+        let storedNumbers = JSON.parse(localStorage.getItem('generatedNumbers'));
+        let currentTime = new Date().getTime();
+
+        if (storedNumbers && currentTime - storedNumbers.timestamp < 7 * 24 * 60 * 60 * 1000) {
+            for (let i = 0; i < storedNumbers.numbers.length; i++) {
+                let numberElement = document.createElement("div");
+                numberElement.className = "number";
+                numberElement.textContent = storedNumbers.numbers[i];
+                numbersContainer.appendChild(numberElement);
+            }
+        } else {
+            let newNumbers = [];
+            for (let i = 0; i < 5; i++) {
+                let number = generateRandomNumber();
+                newNumbers.push(number);
+
+                let numberElement = document.createElement("div");
+                numberElement.className = "number";
+                numberElement.textContent = number;
+                numbersContainer.appendChild(numberElement);
+            }
+
+            localStorage.setItem('generatedNumbers', JSON.stringify({
+                numbers: newNumbers,
+                timestamp: currentTime
+            }));
+        }
+    }
+
+    generateNumbers();
+
+    setInterval(generateNumbers, 7 * 24 * 60 * 60 * 1000);
+</script>
+
+</body>
+</html>
