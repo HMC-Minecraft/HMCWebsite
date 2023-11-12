@@ -17,19 +17,23 @@ var foodY;
 var score = 0;
 
 var gameOver = false;
+var highestScore = getCookie("highestScore");
+
 
 window.onload = function () {
   board = document.getElementById("board");
   board.height = total_row * blockSize;
   board.width = total_col * blockSize;
   context = board.getContext("2d");
-  highestScore = localStorage.getItem("highestScore") || 0;
+  if (!highestScore) {
+    highestScore = 0;
+  }
   updateScore();
 
   placeFood();
   document.addEventListener("keyup", changeDirection);
   setInterval(update, 1000 / 10);
-  
+
 }
 function restartGame() {
   score = 0;
@@ -69,9 +73,9 @@ function update() {
 
   if (score > highestScore) {
     highestScore = score;
-    localStorage.setItem("highestScore", highestScore);
+    setCookie("highestScore", highestScore, 365); // Store for 1 year
     updateScore();
-}
+  }
 
   for (let i = snakeBody.length - 1; i > 0; i--) {
 
@@ -136,5 +140,15 @@ function placeFood() {
 }
 
 function updateScore() {
-  document.getElementById("score-container").textContent = "Score: " + score;
+  document.getElementById("score-container").textContent = "Score: " + score + " | Highest Score: " + highestScore;
+}
+function getCookie(name) {
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+function setCookie(name, value, days) {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = name + "=" + value + ";expires=" + expires.toUTCString();
 }
