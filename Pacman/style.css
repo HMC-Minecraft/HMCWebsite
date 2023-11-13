@@ -1,0 +1,20 @@
+#gameCanvas {
+    box-shadow: 10px 10px 20px black; 
+}
+h1 {
+    text-align: center;
+ font-family: 'Times New Roman', Times, serif;
+ color: lightgray;
+}
+ body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgb(0, 5, 19) 0%,
+        rgb(11, 77, 151) 100%
+    ); 
+ }
