@@ -206,3 +206,8 @@ footer {
   margin-top: 20px;
   border-radius: 10px;
 }
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+  /* Add styles for small screens here */
+}
