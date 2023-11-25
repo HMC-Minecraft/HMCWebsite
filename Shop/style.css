@@ -35,10 +35,11 @@ nav li {
 }
 
 nav a {
+  font-size: 20px;
   padding: 8px;
   border-radius: 10px;
   background-color: #535050;
-  color: #9ab763;
+  color: #b7a363;
   font-family: "Franklin Gothic Medium";
 }
 
@@ -56,10 +57,11 @@ main {
 }
 
 h1 {
-  font-size: 50px;
-  margin: 30px;
+  font-size: 30px;
+  margin: 10px;
+  margin-left: center;
   margin-bottom: 20px;
-  color: #9ab763;
+  color: #000000;
   font-family: sans-serif;
 }
 
@@ -72,18 +74,19 @@ h1 {
   background-size: cover;
   background-position: center;
   background-color: #2c2b2b;
+  color: #ff0000;
 }
 
 .cart-items h2 {
   font-family: Georgia;
-  color: #000000;
+  color: #9ab763;
 }
 
 .cart-table {
   width: 100%;
   border-collapse: collapse;
   font-family: Arial;
-  color: #9ab763;
+  color: #9ab7631d;
 }
 
 .cart-table th {
@@ -100,13 +103,6 @@ h1 {
   font-family: sans-serif;
 }
 
-.shipping-info label {
-  display: block;
-  font-size: 16px; /* Adjust the font size as needed */
-  color: #9ab763; /* Adjust the text color as needed */
-  margin-bottom: 5px;
-}
-
 .shipping-info {
   border-radius: 20px;
   background-image: url("/Shop/images/backgrounds/shipping.png");
@@ -117,28 +113,41 @@ h1 {
   padding: 40px;
   margin-top: 20px;
   font-family: Georgia;
+  color: #9ab763; 
 }
 
 .shipping-info h2 {
   font-family: Verdana;
   margin: -15px 30px;
-  color: #9ab763;
+  color: #9ab763; /* Change this color to your desired text color */
 }
 
 .shipping-info form {
   margin: 50px;
   padding: 0;
   font-family: Times New Roman;
-  color: #4a4a4a;
+  color: #9ab763;
+}
+
+.shipping-info .input-group {
+  margin-bottom: 20px;
+}
+
+.shipping-info label {
+  display: block;
+  font-size: 16px;
+  color: #b7a363; /* Change this color to your desired text color */
+  margin-bottom: 5px;
 }
 
 .shipping-info input {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid #9ab763;
+  border: 2px solid #252525;
   font-family: sans-serif;
-  background-color: #9ab76367;
+  background-color: #9ab76315;
+  color: #9ab763; /* Change this color to your desired text color */
 }
 
 /* Payment container styles */
@@ -155,7 +164,7 @@ h1 {
   padding: 5px;
   border: 1px solid #9ab763;
   border-radius: 5px;
-  color: #9ab763;
+  color: #9ab76349;
   font-family: sans-serif;
 }
 
@@ -186,12 +195,4 @@ footer {
 .social-icons li a img {
   width: 64px;
   height: 64px;
-}
-
-.bitcoin-price {
-  position: absolute;
-  bottom: 20px;
-  left: calc(10% + 2px); /* Adjust the distance from the left */
-  font-family: sans-serif;
-  color: #9ab763;
 }
