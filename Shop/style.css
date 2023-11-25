@@ -1,160 +1,162 @@
 /* Background styles */
 body {
-    background-color: #000000;
-    font-family: sans-serif; /* Set font family for body text */
-  }
-  
-  /* Header styles */
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #2c2b2b;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-  }
-  
-  .logo {
-    margin: 0 auto;
-    width: 150px;
-  }
-  
-  nav {
-    margin-top: 20px;
-    list-style: none;
-    padding: 15px;
-    margin: 0px;
-    text-align: center;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  nav a {
-    padding: 8px;
-    border-radius: 10px;
-    background-color: #535050;
-    color: #e7b309;
-    font-family: 'Franklin Gothic Medium';
-  }
-  
-  nav a:hover {
-    background-color: #2c2b2b;
-  }
-  
-  /* Main content styles */
-  main {
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    font-family: sans-serif;
-  }
-  
-  h1 {
-    font-size: 50px;
-    margin: 30px;
-    margin-bottom: 20px;
-    color: #e77f09; /* Customized color for h1 */
-    font-family: sans-serif;
-  }
-  
-  .cart-items {
-    border-radius: 15px;
-    border: 4px solid #cd1111;
-    padding: 10px;
-    font-family: sans-serif;
-  }
-  
-  .cart-items h2 {
-    color: #e77f09; /* Customized color for "Your Cart" text */
-    font-family: sans-serif;
-  }
-  
-  .cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-  }
-  
-  .cart-table th {
-    padding: 5px;
-    border: 2px solid #191818;
-    text-align: left;
-    color: #e7b309; /* Customized color for table headers */
-    font-family: sans-serif;
-  }
-  
-  .cart-table td {
-    padding: 5px;
-    border: 1px solid #2c2b2b;
-    font-family: sans-serif;
-  }
-  
-  .shipping-info {
-    border-radius: 20px;
-    border: 4px solid #000000;
-    background-color: #2c2b2b; /* Customized color for shipping info background */
-    padding: 40px;
-    margin-top: 20px;
-    font-family: sans-serif;
-  }
-  
-  .shipping-info h2 {
-    margin: -15px 30px;
-    color: #e77f09; /* Customized color for h2 in shipping info */
-    font-family: sans-serif;
-  }
-  
-  .shipping-info form {
-    margin: 30px;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
-  .shipping-info input {
-    width: 100%;
-    padding: 5px;
-    border: 2px solid #2c2b2b;
-    font-family: sans-serif;
-  }
-  
-  .shipping-info button {
-    padding: 4px 10px;
-    border: none;
-    background-color: #b18a09;
-    color: #2c2b2b;
-    cursor: pointer;
-    font-family: sans-serif;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #2c2b2b;
-    color: #e7b309;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .social-icons {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .social-icons li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  .social-icons li a img {
-    width: 32px;
-    height: 32px;
-  }
-  
+  background-color: #646464;
+  font-family: sans-serif;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282828;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 150px;
+}
+
+nav {
+  margin-top: 20px;
+  list-style: none;
+  padding: 15px;
+  margin: 0px;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #535050;
+  color: #9ab763;
+  font-family: "Franklin Gothic Medium";
+}
+
+nav a:hover {
+  background-color: #2c2b2b;
+}
+
+/* Main content styles */
+main {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 30px;
+  margin-bottom: 20px;
+  color: #9ab763;
+  font-family: sans-serif;
+}
+
+.cart-items {
+  border-radius: 15px;
+  border: 4px solid #000000;
+  padding: 10px;
+  font-family: sans-serif;
+  background-image: url("/Shop/images/backgrounds/shipping_information.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #2c2b2b;
+}
+
+.cart-items h2 {
+  font-family: Georgia;
+  color: #000000;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial;
+  color: #9ab763;
+}
+
+.cart-table th {
+  padding: 5px;
+  border: 2px solid #191818;
+  text-align: left;
+  color: #b7a363;
+  font-family: sans-serif;
+}
+
+.cart-table td {
+  padding: 5px;
+  border: 1px solid #2c2b2b;
+  font-family: sans-serif;
+}
+
+.shipping-info {
+  border-radius: 20px;
+  background-image: url("/Shop/images/backgrounds/shipping_information2.png");
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #000000;
+  background-color: #2c2b2b;
+  padding: 40px;
+  margin-top: 20px;
+  font-family: Georgia;
+}
+
+.shipping-info h2 {
+  font-family: Verdana;
+  margin: -15px 30px;
+  color: #9ab763;
+}
+
+.shipping-info form {
+  margin: 50px;
+  padding: 0;
+  font-family: Times New Roman;
+  color: #9ab763;
+}
+
+.shipping-info input {
+  width: 13%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #9ab763;
+  font-family: sans-serif;
+  background-color: #9ab76367;
+}
+
+/* Footer styles */
+footer {
+  background-color: #2c2b2b;
+  color: #e7b309;
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.social-icons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons li a img {
+  width: 64px;
+  height: 64px;
+}
