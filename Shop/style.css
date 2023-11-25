@@ -68,7 +68,7 @@ h1 {
   border: 4px solid #000000;
   padding: 10px;
   font-family: sans-serif;
-  background-image: url("/Shop/images/backgrounds/shipping_information.png");
+  background-image: url("/Shop/images/backgrounds/shipping.png");
   background-size: cover;
   background-position: center;
   background-color: #2c2b2b;
@@ -100,9 +100,16 @@ h1 {
   font-family: sans-serif;
 }
 
+.shipping-info label {
+  display: block;
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #9ab763; /* Adjust the text color as needed */
+  margin-bottom: 5px;
+}
+
 .shipping-info {
   border-radius: 20px;
-  background-image: url("/Shop/images/backgrounds/shipping_information2.png");
+  background-image: url("/Shop/images/backgrounds/shipping.png");
   background-size: cover;
   background-position: center;
   border: 4px solid #000000;
@@ -122,16 +129,34 @@ h1 {
   margin: 50px;
   padding: 0;
   font-family: Times New Roman;
-  color: #9ab763;
+  color: #4a4a4a;
 }
 
 .shipping-info input {
-  width: 13%;
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid #9ab763;
   font-family: sans-serif;
   background-color: #9ab76367;
+}
+
+/* Payment container styles */
+.payment-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2c2b2b;
+  border-radius: 10px;
+}
+
+.payment-container div {
+  padding: 5px;
+  border: 1px solid #9ab763;
+  border-radius: 5px;
+  color: #9ab763;
+  font-family: sans-serif;
 }
 
 /* Footer styles */
@@ -141,6 +166,7 @@ footer {
   padding: 50px;
   text-align: center;
   border-radius: 20px;
+  position: relative;
 }
 
 .social-icons {
@@ -148,6 +174,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .social-icons li {
@@ -159,4 +186,12 @@ footer {
 .social-icons li a img {
   width: 64px;
   height: 64px;
+}
+
+.bitcoin-price {
+  position: absolute;
+  bottom: 20px;
+  left: calc(10% + 2px); /* Adjust the distance from the left */
+  font-family: sans-serif;
+  color: #9ab763;
 }

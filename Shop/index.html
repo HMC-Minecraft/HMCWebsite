@@ -47,7 +47,8 @@
           </tr>
         </thead>
         <tbody>
-          </tbody>
+          <!-- Cart items will be dynamically added here -->
+        </tbody>
       </table>
     </section>
 
@@ -62,13 +63,19 @@
         <input type="text" name="zip" placeholder="ZIP Code" required>
 
         <a href="your_link_here"><img src="images/buttons/orderbutton4.png" alt="Place Order"></a>
-
       </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2023 HMC Studios</p>
+
+    <!-- Bitcoin price container -->
+    <div id="bitcoin-price-container" class="bitcoin-price">
+      <div class="bitcoin-box">
+        Bitcoin Price: <span id="bitcoin-price"></span>
+      </div>
+    </div>
 
     <ul class="social-icons">
       <li><a href="https://github.com/HMC-Minecraft"><img src="images/social-icons/github.png" alt="GitHub"></a></li>
@@ -80,5 +87,27 @@
       <li><a href="#"><img src="images/social-icons/youtube.png" alt="YouTube"></a></li>
     </ul>
   </footer>
+
+  <!-- Script to fetch and display Bitcoin price -->
+  <script>
+    async function fetchBitcoinPrice() {
+      try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await response.json();
+        const bitcoinPrice = data.bitcoin.usd;
+  
+        const bitcoinPriceElement = document.getElementById('bitcoin-price');
+        bitcoinPriceElement.textContent = `$${bitcoinPrice}`;
+        bitcoinPriceElement.style.fontSize = '30px'; // Adjust the font size
+        bitcoinPriceElement.style.color = '#FFD700'; // Adjust the text color
+      } catch (error) {
+        console.error('Error fetching Bitcoin price:', error.message);
+      }
+    }
+  
+    // Fetch Bitcoin price initially and then every 1 minute (60,000 milliseconds)
+    fetchBitcoinPrice();
+    setInterval(fetchBitcoinPrice, 60000); // Update every 1 minute
+  </script>
 </body>
-</html
+</html>
