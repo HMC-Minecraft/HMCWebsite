@@ -1,7 +1,19 @@
-/* Background styles */
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
 body {
   background-color: #646464;
   font-family: sans-serif;
+  font-size: 16px;
+}
+
+.logo {
+  width: 150px;
 }
 
 /* Header styles */
@@ -16,31 +28,22 @@ header {
   width: 100%;
 }
 
-.logo {
-  margin: 0 auto;
-  width: 150px;
-}
-
 nav {
   margin-top: 20px;
   list-style: none;
   padding: 15px;
-  margin: 0px;
   text-align: center;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 nav a {
-  font-size: 20px;
+  font-size: 1.2rem;
   padding: 8px;
   border-radius: 10px;
   background-color: #535050;
   color: #b7a363;
-  font-family: "Franklin Gothic Medium";
+  font-family: "Twitter Sans", sans-serif;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -49,19 +52,17 @@ nav a:hover {
 
 /* Main content styles */
 main {
-  background-image: url("../images/background.png");
+  background-image: url("images/background.png");
   background-size: cover;
   background-position: center;
   padding: 20px;
-  font-family: sans-serif;
 }
 
 h1 {
-  font-size: 30px;
-  margin: 10px;
-  margin-left: center;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin: 10px 0;
   color: #000000;
+  text-align: center;
   font-family: sans-serif;
 }
 
@@ -69,12 +70,12 @@ h1 {
   border-radius: 15px;
   border: 4px solid #000000;
   padding: 10px;
-  font-family: sans-serif;
-  background-image: url("/Shop/images/backgrounds/shipping.png");
+  background-image: url("images/backgrounds/shipping.png");
   background-size: cover;
   background-position: center;
   background-color: #2c2b2b;
   color: #ff0000;
+  margin-top: 20px;
 }
 
 .cart-items h2 {
@@ -89,43 +90,45 @@ h1 {
   color: #9ab7631d;
 }
 
-.cart-table th {
+.cart-table th,
+.cart-table td {
   padding: 5px;
-  border: 2px solid #191818;
-  text-align: left;
-  color: #b7a363;
   font-family: sans-serif;
 }
 
+.cart-table th {
+  border: 2px solid #191818;
+  text-align: left;
+  color: #b7a363;
+}
+
 .cart-table td {
-  padding: 5px;
   border: 1px solid #2c2b2b;
-  font-family: sans-serif;
 }
 
 .shipping-info {
   border-radius: 20px;
-  background-image: url("/Shop/images/backgrounds/shipping.png");
+  background-image: url("images/backgrounds/shipping.png");
   background-size: cover;
   background-position: center;
   border: 4px solid #000000;
   background-color: #2c2b2b;
-  padding: 40px;
+  padding: 20px;
   margin-top: 20px;
   font-family: Georgia;
-  color: #9ab763; 
+  color: #9ab763;
 }
 
 .shipping-info h2 {
   font-family: Verdana;
   margin: -15px 30px;
-  color: #9ab763; /* Change this color to your desired text color */
+  color: #9ab763;
 }
 
 .shipping-info form {
-  margin: 50px;
+  margin: 20px;
   padding: 0;
-  font-family: Times New Roman;
+  font-family: "Times New Roman", sans-serif;
   color: #9ab763;
 }
 
@@ -135,8 +138,8 @@ h1 {
 
 .shipping-info label {
   display: block;
-  font-size: 16px;
-  color: #b7a363; /* Change this color to your desired text color */
+  font-size: 1rem;
+  color: #b7a363;
   margin-bottom: 5px;
 }
 
@@ -147,7 +150,7 @@ h1 {
   border: 2px solid #252525;
   font-family: sans-serif;
   background-color: #9ab76315;
-  color: #9ab763; /* Change this color to your desired text color */
+  color: #9ab763;
 }
 
 /* Payment container styles */
@@ -172,7 +175,7 @@ h1 {
 footer {
   background-color: #2c2b2b;
   color: #e7b309;
-  padding: 50px;
+  padding: 20px;
   text-align: center;
   border-radius: 20px;
   position: relative;
@@ -193,6 +196,44 @@ footer {
 }
 
 .social-icons li a img {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
+}
+
+/* Bitcoin price styles */
+.bitcoin-price {
+  margin-top: 10px;
+}
+
+.bitcoin-box {
+  border: 1px solid #9ab763;
+  padding: 5px;
+  border-radius: 5px;
+  color: #9ab76349;
+  font-family: sans-serif;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .cart-items,
+  .shipping-info {
+    padding: 10px;
+  }
+
+  .shipping-info form {
+    margin: 10px;
+  }
 }
