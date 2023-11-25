@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="images/social-icons/hmc-logo.png" alt="HMC Merchandise Logo" class="logo">
+      <img src="../Images/social-icons/hmc-logo.png" alt="HMC Merchandise Logo">
     </div>
 
     <nav>
@@ -32,7 +32,7 @@
     </nav>
   </header>
 
-  <main>
+  <main style="background-image: url('../Images/backgrounds/background.png'); background-size: cover; background-position: center;">
     <h1>Shopping Cart Checkout</h1>
 
     <section class="cart-items">
@@ -94,7 +94,7 @@
           <option value="bitcoin">Bitcoin</option>
         </select>
 
-        <a href="your_link_here" class="order-button"><img src="images/buttons/orderbutton4.png" alt="Place Order"></a>
+        <a href="your_link_here"><img src="../Images/Buttons/orderbutton4.png" alt="Place Order"></a>
       </form>
     </section>
   </main>
@@ -110,17 +110,36 @@
     </div>
 
     <ul class="social-icons">
-      <li><a href="https://github.com/HMC-Minecraft"><img src="images/social-icons/github.png" alt="GitHub"></a></li>
-      <li><a href="https://m.facebook.com/groups/321316146557160/?ref=share"><img src="images/social-icons/facebook.png" alt="Facebook"></a></li>
-      <li><a href="https://instagram.com/halfmooncayhmc?igshid=ZDdkNTZiNTM="><img src="images/social-icons/instagram.png" alt="Instagram"></a></li>
-      <li><a href="https://discord.com/invite/pExvq23Xww?fbclid=IwAR0l6DAA_9UZpofTXvlVgRHb5yCTaIvIVXZ8RS296Qxw9mUW_RUIW4lFQKM"><img src="images/social-icons/discord.png" alt="Discord"></a></li>
-      <li><a href="#"><img src="images/social-icons/twitter.png" alt="Twitter"></a></li>
-      <li><a href="#"><img src="images/social-icons/tiktok.png" alt="TikTok"></a></li>
-      <li><a href="#"><img src="images/social-icons/youtube.png" alt="YouTube"></a></li>
+      <li><a href="https://github.com/HMC-Minecraft"><img src="../Images/social-icons/github.png" alt="GitHub"></a></li>
+      <li><a href="https://m.facebook.com/groups/321316146557160/?ref=share"><img src="../Images/social-icons/facebook.png" alt="Facebook"></a></li>
+      <li><a href="https://instagram.com/halfmooncayhmc?igshid=ZDdkNTZiNTM="><img src="../Images/social-icons/instagram.png" alt="Instagram"></a></li>
+      <li><a href="https://discord.com/invite/pExvq23Xww?fbclid=IwAR0l6DAA_9UZpofTXvlVgRHb5yCTaIvIVXZ8RS296Qxw9mUW_RUIW4lFQKM"><img src="../Images/social-icons/discord.png" alt="Discord"></a></li>
+      <li><a href="#"><img src="../Images/social-icons/twitter.png" alt="Twitter"></a></li>
+      <li><a href="#"><img src="../Images/social-icons/tiktok.png" alt="TikTok"></a></li>
+      <li><a href="#"><img src="../Images/social-icons/youtube.png" alt="YouTube"></a></li>
     </ul>
   </footer>
 
   <!-- Script to fetch and display Bitcoin price -->
-  <script src="script.js"></script>
+  <script>
+    async function fetchBitcoinPrice() {
+      try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await response.json();
+        const bitcoinPrice = data.bitcoin.usd;
+  
+        const bitcoinPriceElement = document.getElementById('bitcoin-price');
+        bitcoinPriceElement.textContent = `$${bitcoinPrice}`;
+        bitcoinPriceElement.style.fontSize = '30px'; // Adjust the font size
+        bitcoinPriceElement.style.color = '#FFD700'; // Adjust the text color
+      } catch (error) {
+        console.error('Error fetching Bitcoin price:', error.message);
+      }
+    }
+  
+    // Fetch Bitcoin price initially and then every 1 minute (60,000 milliseconds)
+    fetchBitcoinPrice();
+    setInterval(fetchBitcoinPrice, 60000); // Update every 1 minute
+  </script>
 </body>
 </html>

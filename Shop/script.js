@@ -58,9 +58,7 @@ async function fetchBitcoinPrice() {
         const bitcoinPrice = data.bitcoin.usd;
 
         const bitcoinPriceElement = document.getElementById('bitcoin-price');
-        if (bitcoinPriceElement) {
-            bitcoinPriceElement.textContent = `$${bitcoinPrice}`;
-        }
+        bitcoinPriceElement.textContent = `$${bitcoinPrice}`;
     } catch (error) {
         console.error('Error fetching Bitcoin price:', error.message);
     }

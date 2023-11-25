@@ -1,112 +1,208 @@
-.button-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-.button-list li {
-    margin-right: 10px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0074d9;
-    /* Button background color */
-    color: #fff;
-    /* Button text color */
-    text-decoration: none;
-    border: 1px solid #0074d9;
-    /* Button border color */
-    border-radius: 5px;
-    /* Rounded corners */
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-    /* Button background color on hover */
-}
-
-.header {
-    display: block;
-    margin: 0;
-    padding: 5px;
-    background-color: gray;
-    background: gray;
-    background-size: cover;
-}
-
+/* Background styles */
 body {
-    background-color: gray;
-    margin: 0;
-    padding: 0;
+  background-color: #646464;
+  font-family: sans-serif;
+  margin: 0;
 }
 
-.logo-list-item {
-    display: inline;
-    vertical-align: middle;
-    margin-right: 10px;
-    /* Adjust the margin as needed */
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282828;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  padding: 20px 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .logo {
-    width: 50px;
-    /* Adjust the width as needed */
-    height: auto;
-    /* Maintain aspect ratio */
+  margin: 0 auto;
+  width: 150px;
 }
 
-.red {
-    color: red;
-    letter-spacing: 0;
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.blue {
-    color: blue;
-    letter-spacing: 0;
+nav {
+  margin-top: 20px;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
 }
 
-.green {
-    color: green;
-    letter-spacing: 0;
+nav li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-red,
-blue,
-green {
-    letter-spacing: 0;
+/* Home button styles */
+nav a.home-button {
+  font-size: 20px;
+  color: #b7a363;
+  font-family: "Arial", sans-serif;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #282828;
+  text-decoration: none;
 }
 
-.colored-text span {
-    margin-right: -6px;
-    /* Adjust the value to control letter spacing */
+nav a.home-button:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
-.image-width {
-    height: auto;
-    width: 100%;
+/* Merch button styles */
+nav a.merch-button {
+  font-size: 20px;
+  color: #b7a363;
+  font-family: "Arial", sans-serif;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #282828;
+  text-decoration: none;
+}
+
+nav a.merch-button:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+/* Lottery button styles */
+nav a.lottery-button {
+  font-size: 20px;
+  color: #b7a363;
+  font-family: "Arial", sans-serif;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #282828;
+  text-decoration: none;
+}
+
+nav a.lottery-button:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+/* MINI Games button styles */
+nav a.minigames-button {
+  font-size: 20px;
+  color: #b7a363;
+  font-family: "Arial", sans-serif;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #282828;
+  text-decoration: none;
+}
+
+nav a.minigames-button:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+/* Contact button styles */
+nav a.contact-button {
+  font-size: 20px;
+  color: #b7a363;
+  font-family: "Arial", sans-serif;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #282828;
+  text-decoration: none;
+}
+
+nav a.contact-button:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+/* Bio button styles */
+nav a.bio-button {
+  font-size: 20px;
+  color: #b7a363;
+  font-family: "Arial", sans-serif;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #282828;
+  text-decoration: none;
+}
+
+nav a.bio-button:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+/* Add similar styles for other buttons as needed */
+
+/* Main content styles */
+main {
+  background-image: url("/Images/backgrounds/background.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
 h1 {
-    text-align: center;
+  font-size: 30px;
+  margin: 10px 0 20px;
+  color: #000000;
+  font-family: sans-serif;
+  text-align: center;
 }
 
-#presence {
-    background-color: #2f3136;
-    border: 1px solid #2f3136;
-    border-radius: 5px;
-    padding: 10px;
-    width: 300px;
-    margin: 20px auto;
+/* Footer styles */
+footer {
+  background-color: #2c2b2b;
+  color: #e7b309;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: space-between; /* Added to space items at both ends */
 }
 
-#serverName {
-    font-weight: bold;
-    font-size: 24px;
-    color: #7289da;
+/* Move GitHub, Facebook, Instagram, and Discord to the left */
+.social-icons-left {
+  display: flex;
+  align-items: center;
 }
 
-#members {
-    color: #99aab5;
+/* Move Twitter, Tik-Tok, and YouTube to the right */
+.social-icons-right {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons li a img {
+  width: 64px;
+  height: 64px;
+}
+
+/* Additional styles for Bitcoin section */
+#bitcoin-section {
+  border: 2px solid #000000;
+  background-color: #646464;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
