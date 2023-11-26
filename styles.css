@@ -1,11 +1,12 @@
-/* Background styles */
+
 body {
   background-color: #646464;
   font-family: sans-serif;
   margin: 0;
+  font-size: 16px;
 }
 
-/* Header styles */
+
 header {
   display: flex;
   flex-direction: column;
@@ -38,13 +39,17 @@ nav {
   text-align: center;
 }
 
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
 nav li {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* Home button styles */
-nav a.home-button {
+.nav-link {
   font-size: 20px;
   color: #b7a363;
   font-family: "Arial", sans-serif;
@@ -54,99 +59,12 @@ nav a.home-button {
   text-decoration: none;
 }
 
-nav a.home-button:hover {
+.nav-link:hover {
   background-color: #535050;
   border-radius: 10px;
   border: 2px solid #000000;
 }
 
-/* Merch button styles */
-nav a.merch-button {
-  font-size: 20px;
-  color: #b7a363;
-  font-family: "Arial", sans-serif;
-  padding: 2px;
-  border-radius: 10px;
-  background-color: #282828;
-  text-decoration: none;
-}
-
-nav a.merch-button:hover {
-  background-color: #535050;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-
-/* Lottery button styles */
-nav a.lottery-button {
-  font-size: 20px;
-  color: #b7a363;
-  font-family: "Arial", sans-serif;
-  padding: 2px;
-  border-radius: 10px;
-  background-color: #282828;
-  text-decoration: none;
-}
-
-nav a.lottery-button:hover {
-  background-color: #535050;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-
-/* MINI Games button styles */
-nav a.minigames-button {
-  font-size: 20px;
-  color: #b7a363;
-  font-family: "Arial", sans-serif;
-  padding: 2px;
-  border-radius: 10px;
-  background-color: #282828;
-  text-decoration: none;
-}
-
-nav a.minigames-button:hover {
-  background-color: #535050;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-
-/* Contact button styles */
-nav a.contact-button {
-  font-size: 20px;
-  color: #b7a363;
-  font-family: "Arial", sans-serif;
-  padding: 2px;
-  border-radius: 10px;
-  background-color: #282828;
-  text-decoration: none;
-}
-
-nav a.contact-button:hover {
-  background-color: #535050;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-
-/* Bio button styles */
-nav a.bio-button {
-  font-size: 20px;
-  color: #b7a363;
-  font-family: "Arial", sans-serif;
-  padding: 2px;
-  border-radius: 10px;
-  background-color: #282828;
-  text-decoration: none;
-}
-
-nav a.bio-button:hover {
-  background-color: #535050;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-/* Add similar styles for other buttons as needed */
-
-/* Main content styles */
 main {
   background-image: url("/Images/backgrounds/background.png");
   background-size: cover;
@@ -163,7 +81,6 @@ h1 {
   text-align: center;
 }
 
-/* Footer styles */
 footer {
   background-color: #2c2b2b;
   color: #e7b309;
@@ -172,42 +89,42 @@ footer {
   border-radius: 20px;
   border: 2px solid #000000;
   display: flex;
-  justify-content: space-between; /* Added to space items at both ends */
+  flex-direction: column; /* Adjusted to center content */
+  align-items: center; /* Adjusted to center content */
 }
 
-/* Move GitHub, Facebook, Instagram, and Discord to the left */
-.social-icons-left {
+.social-icons {
   display: flex;
   align-items: center;
 }
 
-/* Move Twitter, Tik-Tok, and YouTube to the right */
-.social-icons-right {
-  display: flex;
-  align-items: center;
-}
-
-.social-icons li {
-  list-style: none;
-  display: inline-block;
+.social-icons a {
   margin: 0 10px;
 }
 
-.social-icons li a img {
+.social-icons img {
   width: 64px;
   height: 64px;
 }
 
-/* Additional styles for Bitcoin section */
 #bitcoin-section {
   border: 2px solid #000000;
   background-color: #646464;
-  padding: 10px;
+  padding: 5px;
   margin-top: 20px;
-  border-radius: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 
-/* Media query for small screens */
-@media only screen and (max-width: 600px) {
-  /* Add styles for small screens here */
+.black-space img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.black-space {
+  margin: 0 auto;
+  height: auto;
+  border: 2px solid #000000;
+  background-color: #00000011;
+  border-radius: 5px;
 }

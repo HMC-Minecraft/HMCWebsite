@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instagram+Sans:wght@400&display=swap" media="all">
 
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <header>
@@ -100,26 +102,25 @@
   </main>
 
   <footer>
-    <p>&copy; 2023 HMC Studios</p>
-
-    <!-- Bitcoin price container -->
-    <div id="bitcoin-price-container" class="bitcoin-price">
-      <div class="bitcoin-box">
-        Bitcoin Price: <span id="bitcoin-price"></span>
-      </div>
+    <div class="social-icons social-icons-left">
+      <a href="#"><img src="/Images/social-icons/github.png" alt="GitHub"></a>
+      <a href="#"><img src="/Images/social-icons/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="/Images/social-icons/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="/Images/social-icons/discord.png" alt="Discord"></a>
     </div>
 
-    <ul class="social-icons">
-      <li><a href="https://github.com/HMC-Minecraft"><img src="../Images/social-icons/github.png" alt="GitHub"></a></li>
-      <li><a href="https://m.facebook.com/groups/321316146557160/?ref=share"><img src="../Images/social-icons/facebook.png" alt="Facebook"></a></li>
-      <li><a href="https://instagram.com/halfmooncayhmc?igshid=ZDdkNTZiNTM="><img src="../Images/social-icons/instagram.png" alt="Instagram"></a></li>
-      <li><a href="https://discord.com/invite/pExvq23Xww?fbclid=IwAR0l6DAA_9UZpofTXvlVgRHb5yCTaIvIVXZ8RS296Qxw9mUW_RUIW4lFQKM"><img src="../Images/social-icons/discord.png" alt="Discord"></a></li>
-      <li><a href="#"><img src="../Images/social-icons/twitter.png" alt="Twitter"></a></li>
-      <li><a href="#"><img src="../Images/social-icons/tiktok.png" alt="TikTok"></a></li>
-      <li><a href="#"><img src="../Images/social-icons/youtube.png" alt="YouTube"></a></li>
-    </ul>
-  </footer>
+    <section id="bitcoin-section">
+      <h2>Bitcoin Price</h2>
+      <p>The current price of Bitcoin is: <span id="bitcoin-price">Loading...</span></p>
+    </section>
 
+    <div class="social-icons social-icons-right">
+      <a href="#"><img src="/Images/social-icons/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="/Images/social-icons/tiktok.png" alt="Tik-Tok"></a>
+      <a href="#"><img src="/Images/social-icons/twitter.png" alt="Twitter"></a>
+    </div>
+  </footer>
+  <p>&copy; 2023 HMC Studios</p>
   <!-- Script to fetch and display Bitcoin price -->
   <script>
     async function fetchBitcoinPrice() {
