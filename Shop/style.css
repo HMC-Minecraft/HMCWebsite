@@ -1,11 +1,9 @@
-/* Background styles */
 body {
   background-color: #646464;
   font-family: sans-serif;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
-/* Header styles */
 header {
   display: flex;
   flex-direction: column;
@@ -32,13 +30,19 @@ nav a {
   font-size: 20px;
   padding: 8px;
   border-radius: 10px;
-  background-color: #535050;
+  background-color: #282828;
   color: #b7a363;
-  font-family: "Franklin Gothic Medium";
-  margin: 0 5px; /* Add some space between menu items */
+  font-family: "Arial", sans-serif;
+  margin: 0 5px;
+  text-decoration: none;
 }
 
-/* Main content styles */
+nav a:hover {
+  background-color: #535050;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
 main {
   background-image: url("../images/background.png");
   background-size: cover;
@@ -49,9 +53,7 @@ main {
 
 h1 {
   font-size: 30px;
-  margin: 10px;
-  margin-left: center;
-  margin-bottom: 20px;
+  margin: 10px auto 20px; /* Center the text horizontally */
   color: #000000;
   font-family: sans-serif;
 }
@@ -104,19 +106,19 @@ h1 {
   padding: 20px;
   margin-top: 20px;
   font-family: Georgia;
-  color: #9ab763; 
+  color: #9ab763;
 }
 
 .shipping-info h2 {
   font-family: Verdana;
   margin: -15px 30px;
-  color: #9ab763; /* Change this color to your desired text color */
+  color: #9ab763;
 }
 
 .shipping-info form {
-  margin: 20px; /* Adjust margin */
+  margin: 20px;
   padding: 0;
-  font-family: Times New Roman;
+  font-family: "Times New Roman"; /* Added quotes around the font family name */
   color: #9ab763;
 }
 
@@ -127,7 +129,7 @@ h1 {
 .shipping-info label {
   display: block;
   font-size: 16px;
-  color: #b7a363; /* Change this color to your desired text color */
+  color: #b7a363;
   margin-bottom: 5px;
 }
 
@@ -138,13 +140,12 @@ h1 {
   border: 2px solid #252525;
   font-family: sans-serif;
   background-color: #9ab76315;
-  color: #9ab763; /* Change this color to your desired text color */
+  color: #9ab763;
 }
 
-/* Payment container styles */
 .payment-container {
   display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
   padding: 10px;
@@ -153,8 +154,8 @@ h1 {
 }
 
 .payment-container div {
-  flex: 0 0 48%; /* Set flex basis to 48% to allow some space between items */
-  margin-bottom: 10px; /* Add space between items */
+  flex: 0 0 48%;
+  margin-bottom: 10px;
   padding: 5px;
   border: 1px solid #9ab763;
   border-radius: 5px;
@@ -162,7 +163,6 @@ h1 {
   font-family: sans-serif;
 }
 
-/* Footer styles */
 footer {
   background-color: #2c2b2b;
   color: #e7b309;
@@ -171,15 +171,14 @@ footer {
   border-radius: 20px;
   border: 2px solid #000000;
   display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* Social icon styles */
 .social-icons {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -191,7 +190,6 @@ footer {
   height: 64px;
 }
 
-/* Bitcoin section styles */
 #bitcoin-section {
   border: 2px solid #000000;
   background-color: #646464;
@@ -200,31 +198,29 @@ footer {
   border-radius: 10px;
 }
 
-/* Media query for small screens */
 @media only screen and (max-width: 600px) {
-  /* Adjust styles for small screens here */
   nav {
     flex-direction: column;
   }
 
   nav a {
-    margin: 5px 0; /* Add some space between menu items */
+    margin: 5px 0;
   }
 
   .cart-table th,
   .cart-table td {
-    font-size: 14px; /* Adjust font size for table on small screens */
+    font-size: 14px;
   }
 
   .shipping-info form {
-    margin: 10px; /* Adjust margin */
+    margin: 10px;
   }
 
   .payment-container div {
-    flex: 0 0 100%; /* Set flex basis to 100% for full width on small screens */
+    flex: 0 0 100%;
   }
 
   .social-icons a {
-    margin: 5px; /* Add some space between social icons on small screens */
+    margin: 5px;
   }
 }
