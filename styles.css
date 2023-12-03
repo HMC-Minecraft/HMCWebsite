@@ -128,3 +128,6 @@ footer {
   background-color: #00000011;
   border-radius: 5px;
 }
+.buildImg {
+  max-width: 100%;
+}
