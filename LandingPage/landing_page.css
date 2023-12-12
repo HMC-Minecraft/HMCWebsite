@@ -1,11 +1,9 @@
-
 body {
   background-color: #646464;
   font-family: sans-serif;
   margin: 0;
   font-size: 16px;
 }
-
 
 header {
   display: flex;
@@ -15,7 +13,7 @@ header {
   background-color: #282828;
   border-radius: 20px;
   border: 2px solid #000000;
-  padding: 20px 0px;
+  padding: 20px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
@@ -33,15 +31,13 @@ header {
 
 nav {
   margin-top: 20px;
-  list-style: none;
-  padding: 15px;
-  margin: 0;
-  text-align: center;
 }
 
 nav ul {
   padding: 0;
   margin: 0;
+  text-align: center;
+  list-style: none;
 }
 
 nav li {
@@ -75,10 +71,9 @@ main {
 
 h1 {
   font-size: 30px;
-  margin: 10px 0 20px;
   color: #000000;
-  font-family: sans-serif;
   text-align: center;
+  margin: 10px 0 20px;
 }
 
 footer {
@@ -89,13 +84,14 @@ footer {
   border-radius: 20px;
   border: 2px solid #000000;
   display: flex;
-  flex-direction: column; /* Adjusted to center content */
-  align-items: center; /* Adjusted to center content */
+  flex-direction: column;
+  align-items: center;
 }
 
 .social-icons {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .social-icons a {
@@ -118,7 +114,7 @@ footer {
 
 .blank-space img {
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
 }
 
 .blank-space {
@@ -128,6 +124,22 @@ footer {
   background-color: #00000011;
   border-radius: 5px;
 }
+
 .buildImg {
   max-width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: block;
+  }
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+  .header-content, .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
 }

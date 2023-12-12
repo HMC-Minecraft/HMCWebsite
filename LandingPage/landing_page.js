@@ -1,4 +1,12 @@
+// Add event listener to the menu toggle button
 $(document).ready(function () {
+  const menuToggle = $('.menu-toggle');
+  const nav = $('nav');
+
+  menuToggle.on('click', function () {
+    nav.toggleClass('active');
+  });
+
   // Fetch Bitcoin price from CoinGecko API
   function fetchBitcoinPrice() {
     $.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')

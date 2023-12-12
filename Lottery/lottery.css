@@ -1,11 +1,11 @@
 body {
-    background-color: #646464; 
+    background-color: #646464; /* Color from css2 */
     font-family: sans-serif;
     margin: 0;
     font-size: 16px;
-}
-
-header {
+  }
+  
+  header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,74 +16,67 @@ header {
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-}
-
-.logo {
+  }
+  
+  .logo {
     margin: 0 auto;
-    width: 150px; 
-    height: auto; 
-}
-
-.header-content {
+    width: 150px;
+  }
+  
+  .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-nav {
+  }
+  
+  nav {
     margin-top: 20px;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     padding: 0;
     margin: 0;
     text-align: center;
     list-style: none;
-    display: flex; 
-}
-
-nav li {
+  }
+  
+  nav li {
     display: inline-block;
     margin: 0 10px;
-}
-
-.nav-link, .button {
+  }
+  
+  .nav-link {
     font-size: 20px;
-    color: #b7a363; 
+    color: #b7a363; /* Color from css2 */
     font-family: "Arial", sans-serif;
     padding: 2px;
     border-radius: 10px;
     background-color: #282828;
     text-decoration: none;
-    display: inline-block; 
-    padding: 10px 20px; 
-    border: 1px solid #b7a363;
-    transition: background-color 0.3s ease; 
-}
-
-.nav-link:hover, .button:hover {
-    background-color: #535050; 
+  }
+  
+  .nav-link:hover {
+    background-color: #535050;
     border-radius: 10px;
     border: 2px solid #000000;
-}
-
-
-main {
+  }
+  
+  main {
     background-image: url("/Images/backgrounds/background.png");
     background-size: cover;
     background-position: center;
     padding: 20px;
     font-family: sans-serif;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 30px;
     color: #000000;
     text-align: center;
     margin: 10px 0 20px;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #2c2b2b;
     color: #e7b309;
     padding: 20px;
@@ -93,82 +86,91 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.social-icons {
+  }
+  
+  .social-icons {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     margin: 0 10px;
-}
-
-.social-icons img {
+  }
+  
+  .social-icons img {
     width: 64px;
     height: 64px;
-}
-
-.blank-space img {
+  }
+  
+  .blank-space img {
     max-width: 100%;
     height: auto;
-}
-
-.blank-space {
+  }
+  
+  .blank-space {
     margin: 0 auto;
     height: auto;
     border: 2px solid #000000;
     background-color: #00000011;
     border-radius: 5px;
-}
-
-.buildImg {
+  }
+  
+  .buildImg {
     max-width: 100%;
-}
-
-
-@media screen and (max-width: 600px) {
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 600px) {
     nav ul {
-        display: block;
+      display: block;
     }
     nav li {
-        display: block;
-        margin: 10px 0;
+      display: block;
+      margin: 10px 0;
     }
     .header-content, .social-icons {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-}
-
-
-.container {
+  }
+  
+  /* Additional styles from css1 */
+  .container {
     width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-}
-
-img {
+  }
+  
+  img {
     max-width: 100%;
     height: auto;
-}
-
-.number-container {
+  }
+  
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .number-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-}
-
-.number {
+  }
+  
+  /* Define your number color classes here */
+  .number {
     font-size: 24px;
     border: 1px solid #ccc;
     padding: 10px;
     width: 50px;
     text-align: center;
-    background: #282828; 
+    background: #282828; /* Background color for the number container */
     border-radius: 5px;
     margin: 0 5px;
-    color: #9ab763; 
-}
+    color: #9ab763; /* Change this color to the desired color for the numbers */
+  }
+  
+
+  

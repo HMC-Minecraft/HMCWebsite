@@ -20,8 +20,8 @@ header {
 
 .logo {
     margin: 0 auto;
-    width: 150px; 
-    height: auto; 
+    width: 150px;
+    height: auto;
 }
 
 .header-content {
@@ -39,7 +39,7 @@ nav ul {
     margin: 0;
     text-align: center;
     list-style: none;
-    display: flex; 
+    display: flex;
 }
 
 nav li {
@@ -49,24 +49,23 @@ nav li {
 
 .nav-link, .button {
     font-size: 20px;
-    color: #b7a363; 
+    color: #b7a363;
     font-family: "Arial", sans-serif;
     padding: 2px;
     border-radius: 10px;
     background-color: #282828;
     text-decoration: none;
-    display: inline-block; 
-    padding: 10px 20px; 
+    display: inline-block;
+    padding: 10px 20px;
     border: 1px solid #b7a363;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .nav-link:hover, .button:hover {
-    background-color: #535050; 
+    background-color: #535050;
     border-radius: 10px;
     border: 2px solid #000000;
 }
-
 
 main {
     background-image: url("/Images/backgrounds/background.png");
@@ -127,7 +126,6 @@ footer {
     max-width: 100%;
 }
 
-
 @media screen and (max-width: 600px) {
     nav ul {
         display: block;
@@ -141,7 +139,6 @@ footer {
         align-items: center;
     }
 }
-
 
 .container {
     width: 1200px;
@@ -167,8 +164,8 @@ img {
     padding: 10px;
     width: 50px;
     text-align: center;
-    background: #282828; 
+    background: #282828;
     border-radius: 5px;
     margin: 0 5px;
-    color: #9ab763; 
+    color: #9ab763;
 }
