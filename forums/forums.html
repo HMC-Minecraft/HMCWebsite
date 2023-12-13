@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HMC Forums </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMC Forums</title>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/0db2766383.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Twitter+Sans:wght@400&display=swap" media="all">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Facebook+Social:wght@400&display=swap" media="all">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instagram+Sans:wght@400&display=swap" media="all">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="forums.css">
     <link rel="icon" href="../Images/logos/landing_logo1_410.png" type="image/x-icon">
-    <link rel="stylesheet" href="forums.css" />
-  </head>
-
-  <body>
+</head>
+<body>
     <header>
-      <div class="header-content">
-        <img src="../Images/logos/landing_logo1_205.png" alt="Logo" class="logo">
-        <h1>Welcome to the HMC Forum</h1>
-        <button onclick="signIn()">Sign In</button>
-
-        <nav>
-          <ul>
-            <li>
-              <a href="../index.html" class="nav-link">Home</a>
-            </li>
-            <li>
-              <a href="../MCaddons/mcaddons.html" class="nav-link">MCaddons</a>
-            </li>
-            <li>
-              <a href="../Lottery/lottery.html" class="nav-link">Lottery</a>
-            </li>
-            <li>
-              <a href="../minigames/minigames.html" class="nav-link">Minigames</a>
-            </li>
-            <li><a href="../About/about.html" class="nav-link">About</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header-content">
+            <img src="../Images/logos/landing_logo1_205.png" alt="Logo" class="logo">
+            <h1>Welcome to HMC Forums</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../MCaddons/mcaddons.html" class="nav-link">MCaddons</a></li>
+                    <li><a href="../Lottery/lottery.html" class="nav-link">Lottery</a></li>
+                    <li><a href="../minigames/minigames.html" class="nav-link">Minigames</a></li>
+                    <li><a href="../About/about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Blank space with image -->
     <div class="blank-space">
-      <img
-        src="../Images/backgrounds/header_image.png"
-        alt="Description of the image"
-        class="header-img"
-      />
+        <img src="#" alt="Forum Image" class="buildImg">
     </div>
 
-    <main>
-      <div class="post"></div>
-    </main>
-
     <footer>
-      <div class="social-icons social-icons-left"></div>
-      <div class="social-icons social-icons-right"></div>
-      <p>&copy; 2023 HMC Studios.</p>
+        <div class="social-icons social-icons-left">
+            <a href="#"><img src="../Images/social-icons/github.png" alt="GitHub"></a>
+            <a href="#"><img src="../Images/social-icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../Images/social-icons/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../Images/social-icons/discord.png" alt="Discord"></a>
+        </div>
+
+        <div class="social-icons social-icons-right">
+            <a href="#"><img src="../Images/social-icons/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="../Images/social-icons/tiktok.png" alt="Tik-Tok"></a>
+            <a href="#"><img src="../Images/social-icons/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../Images/social-icons/twitch.png" alt="Twitch"></a>
+        </div>
+
+        <p>&copy; 2023 HMC Studios.</p>
     </footer>
-  </body>
+
+    <!-- jQuery for DOM manipulation -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="forums.js"></script>
+</body>
 </html>
